@@ -1,4 +1,3 @@
-package parte_1_java_semana_2;
 public class Motor {
 	Integer numeroCilindros;
 	String tipo;

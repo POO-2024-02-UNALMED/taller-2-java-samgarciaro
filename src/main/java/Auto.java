@@ -1,4 +1,3 @@
-package parte_1_java_semana_2;
 public class Auto {
 	String modelo;
 	Integer precio;
@@ -19,11 +18,11 @@ public class Auto {
 	}
 	public String verificarIntegridad() {
         if (motor.registro.equals(this.registro)) {
-            return "Las piezas no son originales";
+            return "Las piezas son originales";
         }
         for (Asiento asiento : asientos) {
             if (asiento.registro.equals(this.registro)) {
-                return "Las piezas no son originales";
+                return "Las piezas son originales";
             }
         }
         return "Auto original";
