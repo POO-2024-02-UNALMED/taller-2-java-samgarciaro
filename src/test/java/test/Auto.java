@@ -1,31 +1,30 @@
-package parte_1_java_semana_2;
+package test;
 public class Auto {
-	String modelo;
-	Integer precio;
-	Asiento[] asientos;
-	String marca;
-	Motor motor;
-	Integer registro;
-	String cantidadCreados;
-
-	public int cantidadAsientos() {
-	    int contador = 0;
-	    for (Asiento asiento : asientos) {
-	        if (asiento != null) {
-	            contador++;
-	        }
-	    }
-	    return contador;
-	}
-	public String verificarIntegridad() {
-        if (motor.registro.equals(this.registro)) {
-            return "Las piezas son originales";
-        }
-        for (Asiento asiento : asientos) {
-            if (asiento.registro.equals(this.registro)) {
-                return "Las piezas son originales";
+    String modelo;
+    int precio;
+    String marca;
+    String cantidadCreados;
+    int registro;
+    Motor motor;
+    Asiento[] asientos;  
+    
+    int cantidadAsientos(){
+        int contador=0;
+        for(int i=0; i< asientos.length;i++){
+            if (asientos[i] != null){
+                contador++;
             }
         }
-        return "Auto original";
+        return contador;
     }
+    String verificarIntegridad(){
+        for(Asiento i:asientos){
+            if(i instanceof Asiento){
+                if(i.registro!=motor.registro || i.registro!=registro || registro!=motor.registro){
+                  return"Las piezas no son originales";
+                }
+                } 
+            }    
+        return"Auto original";
+        }    
 }

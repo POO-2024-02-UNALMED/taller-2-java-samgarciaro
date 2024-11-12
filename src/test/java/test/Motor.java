@@ -1,21 +1,14 @@
-package parte_1_java_semana_2;
+package test;
 public class Motor {
-	Integer numeroCilindros;
-	String tipo;
-	Integer registro;
-	public void cambiarRegistro(int nuevoRegistro) {
-        this.registro = nuevoRegistro;
+    int numeroCilindros;
+    String tipo;
+    int registro;
+    void cambiarRegistro(int registro){
+        this.registro=registro;
     }
-
-    public void asignarTipo(String tipo) {
-        if (tipo.equals("electrico")) {
-            this.tipo = tipo;
-        }
-        else if (tipo.equals("gasolina")) {
-        	this.tipo = tipo;
-        }
-        else {
-        	System.out.println("Tipo no permitido");
+    void asignarTipo(String tipo){
+        if (tipo=="gasolina" || tipo=="electrico"){
+            this.tipo=tipo;
         }
     }
 }
